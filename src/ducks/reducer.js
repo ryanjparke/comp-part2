@@ -5,9 +5,14 @@ const initialState = {
     cart: []
 }
 
+
+
 const GET_ANIMALS = "GET_ANIMALS"
 const ADD_TO_CART = "ADD_TO_CART"
+const REMOVE_FROM_CART = "REMOVE_FROM_CART"
 
+
+//action builders
 export function getAnimals() {
     let animals = axios.get('http:localhost:3005/api/animals')
 
@@ -29,7 +34,12 @@ export default function reducer(state=initialState, action) {
         
         case GET_ANIMALS: Object.assign({}, state, action.payload)
 
-        case ADD_TO_CART: Object.assign({}, state, {cart: [...state.cart, action.payload]} )
+        case ADD_TO_CART: 
+        const addAnimal = state.cart.slice();
+        addAnimal.push(action.payload);
+        return Object.assign({}, state, {cart: addAnimal} );
+
+        case REMOVE_FROM_CART:
 
         default:
         return state
