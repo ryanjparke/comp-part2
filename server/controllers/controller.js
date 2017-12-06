@@ -59,5 +59,11 @@ module.exports = {
         db.add_animal([name, type]).then(res => {
             res.status(200).send(res)
         })
+    },
+    deleteAnimal: function(req, res, next) {
+        const db = req.app.get('db');
+        const { id } = req.params;
+
+        db.remove_animal([id]).then();
     }
 }
