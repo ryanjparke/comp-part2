@@ -34,6 +34,9 @@ class Login extends Component {
                             <Link to='/browsing'><button >Login </button></Link>
                             <Link to='/browsing'><button>Register </button></Link>
                         </div>
+                        <div className='hoverable'>
+                            <a href="facebook.com">Don't have a facebook? make one here</a>
+                            </div>
                     </div>
 
                 </div>
