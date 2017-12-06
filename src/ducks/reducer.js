@@ -29,6 +29,13 @@ export function addToCart(animal) {
     }
 }
 
+export function removeFromCart(val) {
+    return {
+        type: REMOVE_FROM_CART,
+        payload: val
+    }
+}
+
 export default function reducer(state=initialState, action) {
     switch(action.type) {
         
@@ -40,6 +47,9 @@ export default function reducer(state=initialState, action) {
         return Object.assign({}, state, {cart: addAnimal} );
 
         case REMOVE_FROM_CART:
+        const removeAnimal = state.cart.slice();
+        removeAnimal.splice(action.payload, 1);
+        return Object.assign({}, state, {cart: removeAnimal});
 
         default:
         return state
