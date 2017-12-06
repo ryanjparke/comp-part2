@@ -13,7 +13,7 @@ const express = require('express'),
 
 
       app.use(session({
-            secret: 'whateverasjdklfasfjk',
+            secret: process.env.SECRET, //real secret is in .env file
             resave: false,
             saveUninitialized: true
       }));
@@ -35,6 +35,7 @@ const express = require('express'),
       app.get('./api/animal/:id', ctrl.getSpecificAnimal)
       app.put('api/animal', ctrl.editAnimal)
       app.post('./api/animal', ctrl.postAnimal)
+      app.delete('./deleteanimal/,:id', ctrl.deleteAnimal)
 
 
       //Listener port

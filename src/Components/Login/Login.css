@@ -22,6 +22,7 @@
     align-items: center;
     flex-direction: column;
     font-weight: lighter;
+    text-shadow: 5px 5px white;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 5px 3px 0 rgba(0, 0, 0, 0.2);
   }
 
@@ -35,9 +36,10 @@
   }
 
   .hoverable a {
-      color: red;
+      color: lightcoral;
       font-size: large;
       cursor: pointer;
+      text-decoration: none;
   }
 
   .hoverable:hover {
