@@ -8,6 +8,7 @@ import Login from './Components/Login/Login';
 import Browsing from './Components/Browsing/Browsing';
 import Details from './Components/Details/Details';
 import Cart from './Components/Cart/Cart';
+import Animal from './Components/Animal/Animal';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route component={ Browsing } path='/browsing' />
             <Route component={ Details } path='/details' />
             <Route component={ Cart } path='/cart' />
+            <Route component={ Animal } path='/animal' />
             </Switch>
             </Router>
         
