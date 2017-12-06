@@ -1,3 +1,3 @@
-module.exports = {
-    getUser: function
-}
+// module.exports = {
+//     getUser: function
+// }

@@ -17,7 +17,7 @@ class Browsing extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3030/api/animals').then(res => {
+        axios.get('http://localhost:3005/api/animals').then(res => {
             this.setState({
                 animals: res.data
             })

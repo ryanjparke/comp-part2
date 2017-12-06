@@ -4,7 +4,7 @@ const express = require('express'),
       cors = require('cors'),
       massive = require('massive'),
       ctrl = require('./controllers/controller'),
-      checkSession = require('./middlewares/checkForSession'),
+      checkForSession = require('./Middlewares/checkForSession'),
       session = require('express-session');
 
 
@@ -35,9 +35,6 @@ const express = require('express'),
       app.get('./api/animal/:id', ctrl.getSpecificAnimal)
       app.put('api/animal', ctrl.editAnimal)
       app.post('./api/animal', ctrl.postAnimal)
-
-
-
 
 
       //Listener port
